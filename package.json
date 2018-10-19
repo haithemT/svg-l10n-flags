@@ -1,0 +1,26 @@
+{
+  "name": "svg-l10n-flags",
+  "version": "0.1",
+  "description": "flags to be used in diffrent ways",
+  "main": "index.js",
+  "author": "Haithem Trabelsi",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.2.0"
+  },
+  "scripts":{
+    "build": " node ./scripts/converter.js"
+  },
+  "devDependencies": {
+    "lint-staged": "^7.3.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "1.14.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "pre-commit": "lint:staged"
+}
